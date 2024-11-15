@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
@@ -6,7 +6,7 @@
 header {
     padding: 50px;
 
-    background-color: rgb(76, 76, 197);
+    background-color: green;
 
     align-items: center;
 
@@ -22,17 +22,23 @@ header h1 {
 
     align-items: center;
 
-    font-size:50px;
+    font-size: 50px;
 
 }
 
-header li a{
+header li a {
     gap: 50px;
 }
 
 .section-1 {
-    background-color: #b6ddea;
-    padding: 250px;
+    padding: 100px;
+    margin: 0px;
+    background-image: url(IMG/imgN.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .section-2 {
@@ -131,7 +137,7 @@ header nav ul li a {
     color: white;
     position: relative;
     width: 200%;
-    
+
 }
 
 .card h3 {
@@ -142,15 +148,19 @@ header nav ul li a {
     background-color: #b6ddea;
 }
 
-.card p{
+.card p {
     color: green;
 }
 
-.section-1 p{
+.section-1 p {
     font-size: 38px;
 
 }
 
-.section-1{
+.section-1 {
     background-color: #113e4e;
+}
+
+.section-cards{
+    background-color: #113e4e ;
 }
