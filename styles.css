@@ -9,6 +9,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #f9f9f9;
 }
 
 .container {
@@ -19,9 +20,11 @@ body {
 
 /* Cabeçalho */
 header {
-    background: #00539C;
+    background: #003366;
     color: white;
     padding: 15px 0;
+    display: flex;
+    align-items: center;
 }
 
 header .logo h1 {
@@ -31,7 +34,7 @@ header .logo h1 {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    margin-left: auto;
     gap: 20px;
 }
 
@@ -39,7 +42,6 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
 }
 
 nav a:hover {
@@ -48,7 +50,7 @@ nav a:hover {
 
 /* Hero Section */
 #hero {
-    background: url('teleferico-hero.jpg') no-repeat center center/cover;
+    background: url('hero-image.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -66,7 +68,7 @@ nav a:hover {
 
 #hero .btn {
     padding: 10px 20px;
-    background: #FF6F61;
+    background: #ff6600;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -74,27 +76,23 @@ nav a:hover {
 }
 
 #hero .btn:hover {
-    background: #FF5647;
+    background: #cc5200;
 }
 
 /* Seções */
 section {
     padding: 40px 0;
+    text-align: center;
 }
 
 h2 {
-    text-align: center;
     margin-bottom: 20px;
     font-size: 28px;
-    color: #00539C;
-}
-
-p {
-    text-align: center;
+    color: #003366;
 }
 
 /* Serviços */
-.servico-grid {
+.servicos-grid {
     display: flex;
     gap: 20px;
     justify-content: space-around;
@@ -104,38 +102,37 @@ p {
 .servico-item {
     flex: 1;
     max-width: 300px;
-    text-align: center;
-    background: #f4f4f4;
+    background: #fff;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .servico-item h3 {
-    color: #FF6F61;
+    color: #ff6600;
     margin-bottom: 10px;
 }
 
-/* Projetos */
-.projetos-grid {
+/* Portfólio */
+.portfolio-grid {
     display: flex;
     gap: 20px;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.projeto-item {
+.portfolio-item {
     flex: 1;
     max-width: 300px;
-    text-align: center;
 }
 
-.projeto-item img {
+.portfolio-item img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
-/* Formulário */
+/* Contato */
 form input, form textarea, form button {
     width: 100%;
     margin-bottom: 15px;
@@ -146,7 +143,7 @@ form input, form textarea, form button {
 }
 
 form button {
-    background: #00539C;
+    background: #003366;
     color: white;
     border: none;
     cursor: pointer;
@@ -154,7 +151,7 @@ form button {
 }
 
 form button:hover {
-    background: #004080;
+    background: #002244;
 }
 
 /* Rodapé */
