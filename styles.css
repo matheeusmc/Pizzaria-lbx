@@ -1,164 +1,331 @@
-/* Reset e Configurações Básicas */
+/* Resetando margens, espaçamentos e bordas padrão */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Inclui bordas e espaçamentos no tamanho total */
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Cabeçalho */
+/* Estilização do cabeçalho */
 header {
-    background: #003366;
-    color: white;
-    padding: 15px 0;
-    display: flex;
-    align-items: center;
+    padding: min(3vh, 2rem); /* Espaçamento interno flexível */
+    width: 100%; /* Ocupar a largura total da página */
+    background-color: rgb(231, 250, 231); /* Cor de fundo */
+    display: flex; /* Itens dispostos em linha */
+    justify-content: space-evenly; /* Espaçamento igual entre os itens */
+    align-items: center; /* Alinhar itens verticalmente ao centro */
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
+    top: 0;
+    left: 0;
+    z-index: 999; /* Garantir que fique acima de outros elementos */
+    box-shadow: 0 0.21rem 0.5rem; /* Sombra do cabeçalho */
 }
 
-header .logo h1 {
-    font-size: 24px;
+/* Estilização do logotipo no cabeçalho */
+header img {
+    width: 125px; /* Largura fixa da imagem */
+    height: auto; /* Altura proporcional */
 }
 
+/* Estilização da lista de navegação */
 nav ul {
-    list-style: none;
-    display: flex;
-    margin-left: auto;
-    gap: 20px;
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Itens em linha */
+    margin-left: auto; /* Empurra a lista para a direita */
+    gap: 20px; /* Espaçamento entre os itens */
 }
 
+/* Estilização dos links de navegação */
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    color: rgb(20, 211, 13); /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Negrito */
 }
 
+/* Efeito de hover nos links */
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-/* Hero Section */
+/* Seção de destaque (Hero Section) */
 #hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+    background: url('hero-image.jpg') no-repeat center center/cover; /* Imagem de fundo centralizada e preenchida */
+    color: white; /* Texto branco */
+    text-align: center; /* Centralizar texto */
+    padding: 80px 20px; /* Espaçamento interno */
 }
 
+/* Título da seção de destaque */
 #hero h2 {
     font-size: 36px;
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espaçamento inferior */
 }
 
+/* Parágrafo da seção de destaque */
 #hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
+/* Botão da seção de destaque */
 #hero .btn {
-    padding: 10px 20px;
-    background: #ff6600;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    padding: 10px 20px; /* Espaçamento interno */
+    background: #ff6600; /* Cor de fundo laranja */
+    color: white; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Arredonda bordas */
+    font-weight: bold; /* Negrito */
+    
 }
 
+/* Efeito de hover no botão */
 #hero .btn:hover {
-    background: #cc5200;
+    background: #cc5200; /* Tom mais escuro no hover */
+    
 }
 
-/* Seções */
+/* Estilização geral para seções */
 section {
-    padding: 40px 0;
-    text-align: center;
+    padding: 40px 0; /* Espaçamento interno vertical */
+    text-align: center; /* Centraliza texto */
+    background-color: #314c53;
 }
 
+/* Títulos das seções */
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Espaçamento inferior */
     font-size: 28px;
-    color: #003366;
+    color: #003366; /* Cor azul */
+    
 }
 
-/* Serviços */
+/* Grade de serviços */
 .servicos-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: flex; /* Layout flexível */
+    gap: 20px; /* Espaçamento entre itens */
+    justify-content: space-around; /* Itens distribuídos horizontalmente */
+    flex-wrap: wrap; /* Permite quebra de linha */
 }
 
+/* Estilo adicional para a seção "Sobre" */
+#sobre {
+    font-size: large; /* Fonte maior */
+}
+
+/* Itens individuais de serviços */
 .servico-item {
-    flex: 1;
-    max-width: 300px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Cada item ocupa o mesmo espaço */
+    max-width: 300px; /* Largura máxima */
+    background: #fff; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+/* Títulos dos serviços */
 .servico-item h3 {
-    color: #ff6600;
-    margin-bottom: 10px;
+    color: #ff6600; /* Cor laranja */
+    margin-bottom: 10px; /* Espaçamento inferior */
 }
 
-/* Portfólio */
-.portfolio-grid {
+/* Seção específica com fundo azul */
+.section-atual {
+    background-color: blue; /* Cor de fundo azul */
+    padding: 50px; /* Espaçamento interno */
+}
+
+/* Div pai contendo 3 caixas */
+.div-pai {
+    display: flex; /* Itens em linha */
+    justify-content: center; /* Centraliza os itens */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    
+}
+
+/* Estilização das caixas (filhas) */
+.div-pai div {
+    width: 200px; /* Largura fixa */
+    height: 280px; /* Altura fixa */
+    background-color: deeppink; /* Fundo rosa forte */
+    margin-right: 20px; /* Espaçamento entre as caixas */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Segunda div pai semelhante à primeira */
+.div-pai2 {
     display: flex;
-    gap: 20px;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.portfolio-item {
-    flex: 1;
-    max-width: 300px;
+.div-pai2 div {
+    width: 200px;
+    height: 280px;
+    background-color: deeppink;
+    margin-right: 20px;
+    border-radius: 10px;
 }
 
-.portfolio-item img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+/* Estilização das caixas específicas com imagens de fundo */
+.div-filho1 {
+    background-image: url(IMG/img1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajusta imagem ao tamanho da caixa */
 }
 
-/* Contato */
-form input, form textarea, form button {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+/* Efeito de hover nas caixas */
+.div-filho1:hover {
+    width: 210px; /* Expande largura */
+    height: 290px; /* Expande altura */
+    transition: 0.8s; /* Animação suave */
+    border-radius: 10px; /* Mantém bordas arredondadas */
 }
 
-form button {
-    background: #003366;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
+/* Repetição de estilos para outras caixas com imagens */
+.div-filho2 {
+    background-image: url(IMG/img2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px; /* Espaçamento inferior */
 }
 
-form button:hover {
-    background: #002244;
+.div-filho2:hover {
+    width: 210px;
+    height: 290px;
+    transition: 0.8s;
+    border-radius: 10px;
 }
 
-/* Rodapé */
+.div-filho3 {
+    background-image: url(IMG/img3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-filho3:hover {
+    width: 210px;
+    height: 290px;
+    transition: 0.8s;
+    border-radius: 10px;
+}
+
+.div-filho4 {
+    background-image: url(IMG/img4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-filho4:hover {
+    width: 210px;
+    height: 290px;
+    transition: 0.8s;
+    border-radius: 10px;
+}
+
+.div-filho5 {
+    background-image: url(IMG/img5.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-filho5:hover {
+    width: 210px;
+    height: 290px;
+    transition: 0.8s;
+    border-radius: 10px;
+}
+
+.div-filho6 {
+    background-image: url(IMG/img6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.div-filho6:hover {
+    width: 210px;
+    height: 290px;
+    transition: 0.8s;
+    border-radius: 10px;
+}
+
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: min(3vh, 4rem);
+    /*Tamanho/preenchimento do Footer*/
+    background-color: rgb(231, 250, 231);
+    /*Cor de fundo*/
+    display: flex;
+    /*Tornando o Footer Flex - Deixando os itens lado a lado*/
+    justify-content: space-evenly;
+    /*Justificativa do conteúdo*/
+    gap: 15px;
+    /*Espaçamento entre os elementos*/
+    box-shadow: 0 0.21rem 0.5rem;
 }
+
+/*Estilizando a logo do Footer*/
+footer .div-logo-footer img {
+    width: 125px;
+    /*Largura da imagem*/
+    height: auto;
+    /*Altura da imagem */
+
+
+}
+
+/*Estilizando o subtítulo do Footer*/
+footer div h3 {
+    color: rgb(65, 83, 65);
+    /*Cor da letra*/
+    font-size: 25px;
+    /*Tamanho da letra*/
+    font-family: Light 300;
+    /*Fonte da letra (Google fonts)*/
+    font-weight: 300;
+    /*Peso/Espressura da letra*/
+
+}
+
+/*Estilizando o parágrafo do Footer*/
+footer div p {
+    color: rgb(65, 83, 65);
+    /*Cor da letra*/
+    font-size: 18px;
+    /*Tamanho da letra*/
+    font-family: Light 300;
+    /*Fonte da letra (Google fonts)*/
+    font-weight: 200;
+    /*Peso/Espressura da letra*/
+}
+
+/*Estilizando os ícones do Footer*/
+.div-sociais i {
+    padding: 10px;
+    /*Aplicando um respiro (padding) dentro dos ícones*/
+    font-size: 20px;
+    /*Tamanhos dos ícones*/
+    background-color: white;
+    /*Cor de fundo*/
+
+}
+
+
+/*Aplicando o hover nos ícones*/
+.div-sociais i:hover {
+    background-color: #7e9991;
+    /*Cor de fundo*/
+    transition: 0.5s;
+    /*Tempo de transição*/
+}
+
+/*Chamamos nossa âncora (a) para estilização*/
+.div-list-footer a {
+    text-decoration: none;
+    /*Decoração do texto (sublinhado) desabilitado (none)*/
+    color: rgb(65, 83, 65); 
+    /*Cor da Letra*/
+}
+
