@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --main-color: #da190f;
+    --bg: #13131a;
+    --bg-card: #0c0c14;
+    --border: 0.1rem solid grey;
+
+}
+
+/* Remove margens, padding e bordas padroes
+Define o conportamento de transição padrão para animaçoes e utiliza a fonte roboto
+A propriedade text-transform: capitalize garante que todas as palavras comecem com a letra maiuscula */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;  /*Letras Maisculas*/
+    transition: 0.2s linear; /* Transição habilitada por padrão */
+    font-family: 'roboto' , 'sans-serif';
+    outline: none;  /*Deixamos as caixas e informaçoes sem contorno*/
+}
+
+html {
+    font-size: 62.5%; /*Configura o font-size para 62.5%, Facilitando o uso do rem (1rem = 10px */
+    overflow-x: hidden;  /*Evita rolagem horizontal. hidden (itens não estourarem)*/
+    scroll-behavior: smooth; /*Adiciona comportamento de rolagem suave*/
+    scroll-padding-top: 9rem; /*È usado como aliado ao scrool-smooth para uma melhor visualização do scrool*/
+}
+
+html::-webkit-scrollbar {
+    width: 0.8rem; /*Personaliza o estilo da barra de rolagem webkit*/
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent; /*Personaliza o estilo da barra de rolagem no webkit*/
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+
+body {
+    background: var(--bg);
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase; /*Texto em caixa alta*/
+    padding-bottom: 3rem;
+    font-size: 4rem;
+}
+
+.heading span {
+    color: var(--main-color);
+    text-transform: uppercase; /*Texto em caixa alta*/
+}
+
+.btn {
+    padding: 0.9rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    color: #fff;
+    cursor: pointer;
+    background: var(--main-color);
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.2rem; /*Espaçamento entre as letras*/
+}
+
+/*Header*/
+
+.header {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.header .logo img {
+    height: 6.5rem;
+    border-radius: 100%;
+}
+
+header nav a {
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+
+}
+
+.header nav a:hover{
+    color: var(--main-color); /*Muda a cor do hover*/
+    border-bottom: 0.1rem solid var(--main-color); /*Adiciona uma linha inferior no hover*/
+    padding-bottom: 0.5rem; /*Adiciona espaçamento inferior no hover*/
+}
+
+.header .icons div {
+    margin-left: 2rem;
+}
+
+.header .icons div ion-icon {
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.header .icons div ion-icon:hover{
+    color: var(--main-color);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+/*Section-Home*/
+
+#home {
+    position: relative;  /*Permite posicionamento relativo*/
+    min-height: 85vh; /*Altura minima da section*/
+    display: flex; /*Tornando Flex*/
+    align-items: center; /*Centraliza verticalmente*/
+    background: url(IMG/home.jpg); /*Adiciona de fundo tambem*/
+    background-size: cover; /*Preenche todo o espaço*/
+    background-position: center;
+    border-bottom: var(--border);
+}
+
+#home::before {
+    content: ""; /*Adiciona pseudo-elemento vazio*/
+    position: absolute; /*Permite o alinhamento profundo*/
+    top: 0; /*Alinha ao topo*/
+    left: 0; /*Alinha a esquerda*/
+    width: 100%; /*Ocupa toda largura*/
+    height: 100%; /*Ocupa toda altura*/
+    background: rgba(0, 0, 0, 0.5); /*Adiciona sobreposição escura*/
+    z-index: 1; /*Posiciona abaixo do conteudo eixo z*/
+}
+
+.content {
+    max-width: 60rem; /*Define largura maxima*/
+    position: relative; /*Permite manipular a posição*/
+    z-index: 2; /*Garante que o conteudo fique acima da sobreposição*/
+}
+
+.content h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.content p {
+    font-size: 2rem;
+    font-weight: lighter; /*Peso da fonte mais leve*/
+    line-height: 1.8; /*Espaçamento entre linhas*/
+    padding: 1rem 0;
+    color: #fff;
+}
+
+/*Section about*/
+
+.row{
+    display: flex;
+    align-items: center;
+    background: var(--bg-card);
+    flex-wrap: wrap;
+    border: var(--border);
+}
+
+.row .image {
+    flex: 1 1 45rem; /*Define o tamanho flexivel do elemento: base 45rem, pose crescer ou encolher*/
+}
+
+.row .image img{
+    width: 100%;
+}
+
+.row .content{
+    flex: 1 1 45rem; /*Define o tamanho flexivel do elemento: base 45rem, pose crescer ou encolher*/
+    padding: 2rem;
+}
+
+.content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.content p {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 1.8rem;
+}
+
+
+/*Menu*/
+
+.menu .box-container {
+    display: grid; /*Organixa os elementos internos em um layout de grade*/
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /*Cria colunas flexiveis com largura minima de 30rem e maxima proporcional*/
+    gap: 1.5;
+}
+
+.box-container .box{
+    padding: 5rem; /*Adicionando espaçamento interno*/
+    text-align: center;
+    border: var(--border);
+    background: var(--bg-card);
+}
+
+.box img {
+    height: 18rem;
+    border-radius: 100%;
+}
+
+.box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through; /*Aplicando linha para indicar o preço riscado*/
+    font-weight: lighter; /*Aplica um peso de fonte mais fino*/
+}
+
+.box:hover {
+    background: #fff;
+}
+
+.box:hover > * { /*Altera a cor dos elementos filhos para preto ao passar o mouse*/
+    color: black;
+}
+
