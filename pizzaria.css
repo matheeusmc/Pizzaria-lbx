@@ -256,11 +256,221 @@ header nav a {
     font-weight: lighter; /*Aplica um peso de fonte mais fino*/
 }
 
-.box:hover {
+.menu .box-container .box:hover {
     background: #fff;
 }
 
-.box:hover > * { /*Altera a cor dos elementos filhos para preto ao passar o mouse*/
+.menu .box-container .box:hover > * { /*Altera a cor dos elementos filhos para preto ao passar o mouse*/
     color: black;
 }
 
+/*Promoções*/
+
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); /* Cria colunas flexiveis com largura minima de
+    30rem e maxima proporcional*/
+    gap: 1.5rem;
+}
+
+.products .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+}
+
+.products .box-container .box .icons a ion-icon {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1.7rem;
+    border: var(--border);
+    color: #fff;
+    margin: 0.3rem;
+}
+
+.box .icons a ion-icon:hover {
+    background: var(--main-color);
+}
+
+.products .box .image{
+    padding: 2.5rem;
+}
+
+.products .box .image img{
+    height: 25rem;
+}
+
+.products .box .content{
+    color: #fff;
+    font-size: 2.5rem;
+} 
+
+.products .box .content .stars ion-icon{
+    font-size: 1.9rem;
+    color: var(--main-color);
+}
+
+.box .content .price {
+    color: white;
+    font-size: 2.5rem;
+}
+
+.products .content .price span {
+    font-weight: lighter;
+    font-size: 1.5rem;
+    text-transform: lowercase;
+}
+
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .box-container .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.review .box-container .box p {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    color: #ccc;
+    padding: 2rem 0;
+}
+
+.user {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover; /*Ajusta a imagem para preencher o container sem distorção*/
+}
+
+.review .box-container .box h3 {
+    padding: 1rem 0;
+    color: #fff;
+    font-size: 2.2rem;
+}
+
+.review .box-container .box .stars ion-icon {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+
+/*Footer*/
+
+.title-footer {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.title-footer span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.footer {
+    background: var(--bg);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7%;
+    flex-wrap: wrap;
+}
+
+.content-1 {
+    flex: 1 1 25rem; /*Define tamanho flexivel com largura minima de 25rem*/
+    margin: 1rem;
+}
+
+.content-1 ul li {
+    margin-bottom: 1rem; /*Espaçamento inferior entre os itens da lista*/
+}
+
+.content-1 ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.3s; /*Aplica transição suave na mudança de cor*/
+}
+
+.content-1 ul li a:hover {
+    color: var(--main-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: #ccc;
+    font-size: 3rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--main-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    border-top: 2rem;
+    border-top: var(--border);
+    margin-top: 2rem;
+    color: #ccc;
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header nav {
+        display: none;
+    }
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
